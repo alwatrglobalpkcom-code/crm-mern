@@ -38,6 +38,7 @@ export default function ActivityLogs() {
 
   useEffect(() => {
     loadLogs(pagination.page, pagination.limit);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [entity, action, searchDebounced, pagination.page, pagination.limit]);
 
   const handlePageChange = (p) => setPagination(prev => ({ ...prev, page: p }));

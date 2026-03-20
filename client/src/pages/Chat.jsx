@@ -78,6 +78,7 @@ export default function Chat() {
     loadMessages(userId)
       .then(() => loadConversations(true))
       .finally(() => setMessagesLoading(false));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedUser?._id]);
 
   useEffect(() => {
@@ -93,6 +94,7 @@ export default function Chat() {
     };
     socket.on('new_message', onNewMessage);
     return () => socket.off('new_message', onNewMessage);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedUser?._id, socket, user?._id]);
 
   useEffect(() => {
@@ -108,6 +110,7 @@ export default function Chat() {
       socket.off('typing');
       socket.off('typing_stop');
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedUser?._id, socket]);
 
   useEffect(() => {
@@ -115,6 +118,7 @@ export default function Chat() {
     const userId = selectedUser._id != null ? String(selectedUser._id) : selectedUser._id;
     const interval = setInterval(() => loadMessages(userId, true), 5000);
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedUser?._id]);
 
   useEffect(() => {

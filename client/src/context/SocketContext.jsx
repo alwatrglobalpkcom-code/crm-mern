@@ -58,6 +58,7 @@ export const SocketProvider = ({ children }) => {
       socketRef.current = null;
       setSocket(null);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user?._id]);
 
   return (

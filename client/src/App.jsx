@@ -33,7 +33,7 @@ function DashboardOrAgentWork() {
 }
 
 function IndexRedirect() {
-  const { user } = useAuth();
+  useAuth();
   return <Navigate to="/dashboard" replace />;
 }
 
