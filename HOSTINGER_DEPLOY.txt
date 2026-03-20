@@ -1,0 +1,53 @@
+========================================
+  HOSTINGER DEPLOYMENT - FINAL STEPS
+========================================
+
+FILE: crm-hostinger.zip
+(Project folder mein hai)
+
+----------------------------------------
+HOSTINGER SETTINGS (exactly yeh daalo)
+----------------------------------------
+
+Framework preset:    Express
+Node version:        22.x
+Root directory:      app
+Entry file:          server.js
+Package manager:     npm
+
+----------------------------------------
+ENVIRONMENT VARIABLES (Add karo)
+----------------------------------------
+
+NODE_ENV=production
+PORT=5002
+MONGODB_URI=mongodb+srv://crmuser:Admin%40123@cluster0.ei2mpro.mongodb.net/crm?retryWrites=true&w=majority
+JWT_SECRET=crm-secret-key-change-in-production-xyz
+
+(Optional - Email)
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=maqmenterprises0@gmail.com
+SMTP_PASS=exga wrhx rhem qtrk
+SMTP_FROM=CRM <maqmenterprises0@gmail.com>
+
+----------------------------------------
+STEPS
+----------------------------------------
+
+1. Hostinger → Node.js app → Upload
+2. crm-hostinger.zip upload karo
+3. Root directory = app (zaroori!)
+4. Entry file = server.js
+5. NODE_ENV = production
+6. JWT_SECRET = 32+ characters
+7. Save and redeploy
+
+----------------------------------------
+Agar Root directory "app" kaam na kare:
+----------------------------------------
+
+Try: crm-hostinger/app
+(Pehle extract karke dekho ZIP mein kya structure hai)
+
+========================================

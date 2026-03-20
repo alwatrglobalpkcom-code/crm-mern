@@ -1,0 +1,8 @@
+/* Main layout uses Tailwind - gradient in MainLayout.jsx */
+.main-content > h1 {
+  @apply text-2xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight;
+}
+
+.main-content > h2 {
+  @apply text-lg font-semibold text-slate-600 dark:text-slate-400 mt-6 mb-4;
+}

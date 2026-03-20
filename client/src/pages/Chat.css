@@ -1,0 +1,134 @@
+.chat-page {
+  @apply space-y-6 animate-slide-up;
+}
+
+.chat-header {
+  @apply mb-6;
+}
+
+.chat-layout {
+  @apply flex flex-col lg:flex-row gap-4 lg:gap-0 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 bg-white dark:bg-slate-800/80 overflow-hidden;
+  min-height: 480px;
+}
+
+.chat-sidebar {
+  @apply lg:w-72 border-b lg:border-b-0 lg:border-r border-slate-200/60 dark:border-slate-700/60 bg-slate-50/50 dark:bg-slate-900/50;
+}
+
+.chat-conversations {
+  @apply p-2 space-y-1;
+}
+
+.chat-conv-item {
+  @apply w-full flex items-center gap-3 p-3 rounded-xl text-left transition-all duration-200 relative;
+  @apply hover:bg-slate-100 dark:hover:bg-slate-800/80;
+}
+
+.chat-conv-item.active {
+  @apply bg-primary-500/10 dark:bg-primary-500/10 border border-primary-500/20;
+}
+
+.chat-conv-avatar {
+  @apply w-10 h-10 rounded-full bg-primary-500/20 text-primary-600 dark:text-primary-400 flex items-center justify-center font-semibold text-sm shrink-0;
+}
+
+.chat-conv-info {
+  @apply flex-1 min-w-0;
+}
+
+.chat-conv-row {
+  @apply flex items-center justify-between gap-2;
+}
+
+.chat-conv-name {
+  @apply font-medium text-slate-900 dark:text-white truncate;
+}
+
+.chat-conv-time {
+  @apply text-xs text-slate-400 dark:text-slate-500 shrink-0;
+}
+
+.chat-conv-preview {
+  @apply block text-sm text-slate-500 dark:text-slate-400 truncate;
+}
+
+.chat-conv-unread {
+  @apply absolute top-2 right-2 min-w-[1.25rem] h-5 px-1.5 rounded-full bg-primary-500 text-white text-xs font-semibold flex items-center justify-center shrink-0;
+}
+
+.chat-main {
+  @apply flex-1 flex flex-col min-h-0;
+}
+
+.chat-empty {
+  @apply flex-1 flex items-center justify-center p-8;
+}
+
+.chat-header-bar {
+  @apply flex items-center gap-3 p-4 border-b border-slate-200/60 dark:border-slate-700/60;
+}
+
+.chat-header-avatar {
+  @apply w-10 h-10 rounded-full bg-primary-500/20 text-primary-600 dark:text-primary-400 flex items-center justify-center font-semibold text-sm shrink-0;
+}
+
+.chat-messages {
+  @apply flex-1 overflow-y-auto p-4 space-y-3;
+}
+
+.chat-msg {
+  @apply flex;
+}
+
+.chat-msg-me {
+  @apply justify-end;
+}
+
+.chat-msg-them {
+  @apply justify-start;
+}
+
+.chat-msg-bubble {
+  @apply max-w-[75%] px-4 py-2.5 rounded-2xl;
+}
+
+.chat-msg-me .chat-msg-bubble {
+  @apply bg-primary-500 text-white rounded-br-md;
+}
+
+.chat-msg-them .chat-msg-bubble {
+  @apply bg-slate-100 dark:bg-slate-700/80 text-slate-900 dark:text-slate-100 rounded-bl-md;
+}
+
+.chat-msg-text {
+  @apply text-sm leading-relaxed;
+}
+
+.chat-msg-meta {
+  @apply flex items-center gap-1.5 mt-1 justify-end;
+}
+
+.chat-msg-them .chat-msg-meta {
+  @apply justify-start;
+}
+
+.chat-msg-time {
+  @apply text-xs opacity-75;
+}
+
+.chat-msg-status {
+  @apply text-xs opacity-80;
+}
+
+.chat-input-form {
+  @apply flex gap-2 p-4 border-t border-slate-200/60 dark:border-slate-700/60;
+}
+
+.chat-input {
+  @apply flex-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 text-sm;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500;
+}
+
+.chat-send-btn {
+  @apply px-5 py-3 rounded-xl bg-primary-500 text-white font-medium text-sm hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shrink-0;
+}

@@ -1,0 +1,271 @@
+.documents-page {
+  padding: 0 4px;
+}
+
+.docs-loading {
+  padding: 48px;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.docs-header {
+  margin-bottom: 28px;
+}
+
+.docs-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+
+.docs-subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}
+
+.docs-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.docs-filters {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .docs-filters {
+    grid-template-columns: 1fr 1fr auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .docs-filters {
+    grid-template-columns: minmax(200px, 280px) 1fr minmax(120px, 160px);
+  }
+}
+
+.docs-select-card,
+.docs-search-card,
+.docs-type-card {
+  background: var(--color-surface);
+  padding: 20px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.docs-select-card label,
+.docs-search-card label,
+.docs-type-card label {
+  @apply block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2;
+}
+
+.docs-select-card select,
+.docs-type-card select {
+  @apply w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 text-base transition-all duration-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500;
+}
+
+.docs-search-input {
+  @apply w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 text-base transition-all duration-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500;
+}
+
+.docs-upload-hint {
+  @apply text-xs text-slate-500 dark:text-slate-400 mb-3;
+}
+
+.docs-upload-card {
+  background: var(--color-surface);
+  padding: 24px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+@media (min-width: 640px) {
+  .docs-upload-card { padding: 32px; }
+}
+
+.docs-upload-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.upload-form {
+  @apply flex flex-col sm:flex-row gap-4 items-stretch sm:items-center flex-wrap;
+}
+
+.upload-form label {
+  @apply block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2;
+}
+
+.upload-form input[type="file"] {
+  @apply flex-1 min-w-0 sm:min-w-[200px] px-4 py-3 rounded-xl border border-dashed border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-800/50 text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary-500 file:text-white file:text-sm file:font-medium transition-all duration-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500;
+}
+
+.upload-form button {
+  padding: 12px 24px;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.25);
+}
+
+.upload-form button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+}
+
+.upload-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.docs-upload-progress {
+  @apply w-full flex items-center gap-3;
+}
+
+.docs-upload-progress-track {
+  @apply flex-1 h-2 rounded-full bg-slate-200 dark:bg-slate-600 overflow-hidden;
+}
+
+.docs-upload-progress-bar {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+.docs-upload-progress-text {
+  @apply text-xs font-medium text-slate-600 dark:text-slate-400 shrink-0 min-w-[2.5rem];
+}
+
+.docs-list-card {
+  background: var(--color-surface);
+  padding: 24px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+@media (min-width: 640px) {
+  .docs-list-card { padding: 32px; }
+}
+
+.docs-list-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.docs-loading-state {
+  @apply flex flex-col items-center justify-center gap-3 py-12;
+}
+
+.docs-spinner {
+  @apply w-10 h-10 border-2 border-slate-200 dark:border-slate-600 border-t-primary-500 rounded-full animate-spin;
+}
+
+.docs-loading-state span {
+  @apply text-sm text-slate-500 dark:text-slate-400;
+}
+
+.docs-empty-state {
+  @apply flex flex-col items-center justify-center gap-4 py-16 px-6 text-center;
+}
+
+.docs-empty-msg {
+  @apply text-slate-500 dark:text-slate-400 max-w-md;
+}
+
+.docs-empty-btn {
+  @apply px-5 py-2.5 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-xl transition-colors;
+}
+
+.empty-msg {
+  color: var(--color-text-muted);
+  padding: 24px;
+  text-align: center;
+}
+
+.doc-cards {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4;
+}
+
+.doc-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  padding: 16px 20px;
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  transition: border-color var(--transition);
+}
+
+.doc-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.doc-card .doc-name {
+  flex: 1;
+  min-width: 0;
+}
+
+.doc-card .doc-meta {
+  @apply text-xs text-slate-500 dark:text-slate-400;
+}
+
+.doc-card:hover {
+  border-color: var(--color-primary);
+}
+
+.doc-name {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+  font-weight: 500;
+  text-align: left;
+  font-size: 0.9375rem;
+}
+
+.doc-name:hover {
+  text-decoration: underline;
+}
+
+.doc-date {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.doc-card .btn-sm {
+  padding: 6px 12px;
+  font-size: 0.8125rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: var(--color-danger);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.doc-card .btn-sm:hover {
+  background: #fee2e2;
+  transform: translateY(-1px);
+}

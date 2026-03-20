@@ -1,0 +1,182 @@
+.profile-page h1 {
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+}
+
+.profile-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  max-width: 640px;
+  transition: box-shadow var(--transition);
+}
+
+.profile-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 36px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  color: #fff;
+}
+
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #818cf8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+}
+
+.profile-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+
+.profile-header .email {
+  color: #94a3b8;
+  font-size: 0.9375rem;
+  margin-bottom: 10px;
+}
+
+.role-badge {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.role-admin {
+  background: rgba(124, 58, 237, 0.3);
+  color: #c4b5fd;
+}
+
+.role-manager {
+  background: rgba(14, 165, 233, 0.3);
+  color: #7dd3fc;
+}
+
+.role-agent {
+  background: rgba(16, 185, 129, 0.3);
+  color: #6ee7b7;
+}
+
+.profile-details {
+  padding: 28px 36px;
+}
+
+.profile-details h3 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 24px 0 10px;
+}
+
+.profile-details h3:first-child {
+  margin-top: 0;
+}
+
+.role-desc {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 0.9375rem;
+}
+
+.permissions-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.permissions-list li {
+  padding: 10px 0;
+  padding-left: 28px;
+  position: relative;
+  color: var(--color-text);
+  font-size: 0.9375rem;
+}
+
+.permissions-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+.profile-edit-section {
+  margin-top: 32px;
+  padding: 28px;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  max-width: 480px;
+}
+
+.profile-edit-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.profile-form label {
+  @apply block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2;
+}
+
+.profile-form input {
+  @apply w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 mb-5 transition-all duration-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500;
+}
+
+.profile-form .form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.profile-form .form-actions button {
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.profile-form .form-actions button:not([type="submit"]):hover {
+  background: #f8fafc;
+}
+
+[data-theme="dark"] .profile-form .form-actions button:not([type="submit"]):hover {
+  background: #334155;
+}
+
+.profile-form .form-actions button[type="submit"] {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.25);
+}
+
+.profile-form .form-actions button[type="submit"]:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+}

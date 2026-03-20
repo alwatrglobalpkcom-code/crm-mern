@@ -1,0 +1,128 @@
+.sidebar-header {
+  position: relative;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 12px 8px;
+  overflow-y: auto;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  background: transparent;
+  @apply text-slate-400 rounded-xl mb-1 font-medium text-sm text-left;
+  transition: all 0.2s ease;
+  position: relative;
+  cursor: pointer;
+  min-height: 44px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sidebar:not(.sidebar-collapsed) .nav-link {
+  padding: 10px 14px;
+}
+
+.sidebar-collapsed .nav-link {
+  justify-content: center;
+  padding: 12px;
+}
+
+.nav-link:hover {
+  @apply bg-slate-800 text-white;
+}
+
+.nav-link.active {
+  @apply bg-primary-500/90 text-white;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+}
+
+.nav-link.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  @apply bg-white rounded-r;
+  opacity: 0.9;
+}
+
+.sidebar-collapsed .nav-link.active::before {
+  display: none;
+}
+
+.nav-badge {
+  @apply bg-red-500 text-white text-xs font-semibold min-w-[20px] h-5 rounded-full flex items-center justify-center px-2 shrink-0;
+}
+
+.sidebar-collapsed .nav-badge {
+  margin-left: 0;
+}
+
+.nav-link.active .nav-badge {
+  @apply bg-white/30;
+}
+
+.sidebar-footer {
+  padding: 12px;
+  @apply border-t border-slate-200/10;
+}
+
+.sidebar-collapsed .sidebar-footer {
+  padding: 12px 8px;
+}
+
+.sidebar-collapsed .user-block {
+  justify-content: center;
+}
+
+.sidebar-collapsed .logout-btn {
+  justify-content: center;
+  padding: 12px;
+}
+
+.user-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-radius: 4px;
+  transition: color 0.2s;
+}
+
+.user-block:hover {
+  @apply text-white;
+}
+
+.user-name {
+  display: block;
+  @apply text-sm font-semibold mb-0.5 text-slate-200;
+  transition: color 0.2s;
+}
+
+.user-name:hover {
+  @apply text-white;
+}
+
+.user-role {
+  display: block;
+  @apply text-xs text-slate-500;
+}
+
+.logout-btn {
+  @apply w-full py-2.5 px-4 rounded-xl text-sm font-medium flex items-center justify-center;
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  @apply bg-red-500 text-white border-red-500;
+}

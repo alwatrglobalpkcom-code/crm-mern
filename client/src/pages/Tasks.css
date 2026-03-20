@@ -1,0 +1,309 @@
+.tasks-page {
+  padding: 0 4px;
+}
+
+.tasks-loading {
+  padding: 48px;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.tasks-header {
+  @apply flex flex-col sm:flex-row sm:justify-between sm:items-start flex-wrap gap-4 sm:gap-5 mb-6;
+}
+
+.tasks-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+
+.tasks-subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}
+
+.tasks-search-row {
+  margin-bottom: 16px;
+}
+
+.tasks-search-input {
+  @apply w-full max-w-md px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 text-base;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500;
+}
+
+.tasks-header .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tasks-page .view-toggle {
+  display: flex;
+  background: rgba(99, 102, 241, 0.08);
+  border-radius: var(--radius-md);
+  padding: 4px;
+  border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.tasks-page .view-toggle button {
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.tasks-page .view-toggle button.active {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.tasks-page .btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all var(--transition);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.25);
+}
+
+.tasks-page .btn-primary:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+}
+
+.pending-section {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border: 1px solid #fde68a;
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.pending-section h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #b45309;
+  letter-spacing: -0.01em;
+}
+
+.pending-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.task-cards {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5;
+}
+
+.task-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  padding: 24px;
+  transition: all var(--transition);
+}
+
+.task-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(99, 102, 241, 0.25);
+  transform: translateY(-2px);
+}
+
+.task-card.overdue {
+  border-left: 4px solid var(--color-danger);
+}
+
+.task-card.pending {
+  background: linear-gradient(135deg, #fffbeb 0%, #fefce8 100%);
+  border-color: #fde68a;
+}
+
+.task-card .task-type {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.task-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.task-card .task-client {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.task-card .task-meta {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+
+.task-card .task-status select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  font-size: 0.875rem;
+  margin-bottom: 14px;
+  width: 100%;
+}
+
+.task-card .task-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.task-card .btn-sm {
+  padding: 6px 14px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: #f8fafc;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: all var(--transition);
+}
+
+.task-card .btn-sm:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+.task-card .btn-sm.btn-success {
+  background: #dcfce7;
+  color: #15803d;
+  border-color: #bbf7d0;
+}
+
+.task-card .btn-sm.btn-danger {
+  background: #fef2f2;
+  color: var(--color-danger);
+  border-color: #fecaca;
+}
+
+.task-table-wrap {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+  margin: 0 -8px;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .task-table-wrap { margin: 0; }
+}
+
+.task-table-scroll {
+  overflow-x: auto;
+}
+
+.task-table {
+  @apply w-full min-w-[600px] border-collapse;
+}
+
+.task-table th,
+.task-table td {
+  padding: 18px 24px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.15s ease;
+}
+
+.task-table th {
+  background: rgba(99, 102, 241, 0.06);
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.task-table tbody tr:nth-child(even) td {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="dark"] .task-table tbody tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.task-table tbody tr:hover td {
+  background: rgba(99, 102, 241, 0.08) !important;
+}
+
+[data-theme="dark"] .task-table tbody tr:hover td {
+  background: rgba(99, 102, 241, 0.12) !important;
+}
+
+.task-table tr.overdue td {
+  background: #fef2f2 !important;
+}
+
+[data-theme="dark"] .task-table tr.overdue td {
+  background: rgba(239, 68, 68, 0.15) !important;
+}
+
+.task-table tr.overdue:hover td {
+  background: rgba(239, 68, 68, 0.2) !important;
+}
+
+[data-theme="dark"] .task-table tr.overdue:hover td {
+  background: rgba(239, 68, 68, 0.25) !important;
+}
+
+.task-table .btn-sm {
+  padding: 6px 12px;
+  font-size: 0.8125rem;
+  margin-right: 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: #f8fafc;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition);
+}
+
+.task-table .btn-sm:hover {
+  transform: translateY(-1px);
+}
+
+.task-table .btn-sm.btn-danger {
+  background: #fef2f2;
+  color: var(--color-danger);
+  border-color: #fecaca;
+}
+

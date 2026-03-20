@@ -1,0 +1,7 @@
+.task-form-page .form-hint {
+  @apply text-slate-500 dark:text-slate-400 text-[0.9375rem] mb-6;
+}
+
+.task-form-card {
+  @apply max-w-2xl;
+}
