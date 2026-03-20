@@ -76,6 +76,15 @@ Build + Seed + Start hoga. Green "Live" dikhega.
 5. Variables add karo
 6. Deploy
 
+**Agar login nahi ho raha (admin nahi bana):** Railway Variables mein add karo:
+- `SEED_SECRET` = `abc123` (ya koi bhi secret)
+
+Phir browser mein open karo:
+```
+https://crm-mern-production.up.railway.app/api/auth/seed-admin?key=abc123
+```
+Admin create ho jayega. Login: `admin@crm.com` / `admin123`
+
 ---
 
 ## ⚠️ Note

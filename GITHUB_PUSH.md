@@ -39,10 +39,28 @@ git push -u origin main
 
 ### Railway.app
 1. https://railway.app → New Project → Deploy from GitHub
-2. Repo select karo
-3. **Root Directory:** `server`
-4. Env vars add karo
-5. Deploy
+2. Repo select karo (`crm-mern`)
+3. **Root Directory:** leave empty (use project root)
+4. **Variables** tab → Add these (REQUIRED):
+
+| Variable | Value |
+|----------|-------|
+| `NODE_ENV` | `production` |
+| `PORT` | `8080` |
+| `MONGODB_URI` | `mongodb+srv://user:pass@cluster.mongodb.net/crm` |
+| `JWT_SECRET` | 32+ character secret (e.g. `crm-secret-key-change-in-production-xyz-123`) |
+
+5. **Networking** → Public domain → Target port **8080**
+6. Deploy
+
+**Important:** Without `MONGODB_URI` and `JWT_SECRET`, the app will crash on startup. Check **Deploy Logs** if it fails.
+
+**Default login (after first deploy):**
+- Email: `admin@crm.com`
+- Password: `admin123`
+
+**Agar admin nahi bana:** Railway Variables mein `SEED_SECRET=abc123` add karo, phir browser mein open karo:
+`https://crm-mern-production.up.railway.app/api/auth/seed-admin?key=abc123`
 
 ---
 
@@ -50,9 +68,9 @@ git push -u origin main
 
 ```
 NODE_ENV=production
-PORT=5002
+PORT=8080
 MONGODB_URI=mongodb+srv://...
-JWT_SECRET=crm-secret-key-change-in-production-xyz
+JWT_SECRET=crm-secret-key-change-in-production-xyz-32chars
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your-email
